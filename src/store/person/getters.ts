@@ -3,7 +3,7 @@ import { StateInterface } from '../index';
 import { PersonStateInterface } from './state';
 
 const getters: GetterTree<PersonStateInterface, StateInterface> = {
-  Persons (state) {
+  getPersons (state) {
     return state.persons
   }
 };

@@ -10,17 +10,17 @@ $bg-light: #fffef6;
 // dark colors
 $bg-dark: #1c0c5b;
 
-.bg-dark {
-  background-color: $bg-dark !important;
-}
+// .bg-dark {
+//   background-color: $bg-dark !important;
+// }
 
-.body--light {
-  background-color: $bg-light;
+// .body--light {
+//   background-color: $bg-light;
 
-  .q-toolbar {
-    background: $bg-light;
-  }
-}
+//   .q-toolbar {
+//     background: $bg-light;
+//   }
+// }
 
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap");
 @font-face {

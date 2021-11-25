@@ -1,1 +1,275 @@
 // app global css in SCSS form
+$text-primary: #172b4d;
+$text-primary2: #2d0d88;
+$text-primary3: #5114ff;
+$text-secondary: #9a9b9c;
+
+//  light colors
+$bg-light: #fffef6;
+
+// dark colors
+$bg-dark: #1c0c5b;
+
+.bg-dark {
+  background-color: $bg-dark !important;
+}
+
+.body--light {
+  background-color: $bg-light;
+
+  .q-toolbar {
+    background: $bg-light;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap");
+@font-face {
+  font-family: "SFRounded";
+  src: url(../assets/fonts/SFRounded/SFRounded-Regular.woff2);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFRounded";
+  src: url(../assets/fonts/SFRounded/SFRounded-Medium.woff2);
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFRounded";
+  src: url(../assets/fonts/SFRounded/SFRounded-Bold.woff2);
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFRounded";
+  src: url(../assets/fonts/SFRounded/SFRounded-Heavy.woff2);
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+  font-family: "Sora", sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: "SFRounded";
+}
+
+.text-bold {
+  font-weight: 600;
+  //   210476
+}
+
+.text-bolder {
+  font-weight: 800;
+}
+
+.text-boldest {
+  font-weight: 900;
+}
+
+.text-unbold {
+  font-weight: 400;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-35 {
+  width: 35%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.text-primary {
+  color: $text-primary !important;
+}
+
+.text-primary2 {
+  color: $text-primary2 !important;
+}
+
+.text-primary3 {
+  color: $text-primary3 !important;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: unset;
+}
+
+.wrap-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.custom-form-input .q-field__inner {
+  background-color: #ebebeb;
+  border-radius: 3px;
+  padding: 0 10px;
+}
+
+.menu-text {
+  font-size: 18px !important;
+  font-weight: 800 !important;
+}
+
+/* Section 1 Styles  */
+
+.wrapper-title-dropdown .q-btn__wrapper .q-btn__content .block {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Section 2 Styles  */
+
+.title-menu {
+  position: relative;
+  overflow: scroll;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  min-height: 0px;
+  max-height: calc(100% + 0px);
+  flex-grow: 0;
+}
+
+.title-menu-wrapper {
+  vertical-align: inherit;
+  max-width: 100%;
+  min-height: 0px;
+  min-width: 0px;
+  flex: 1 0 auto;
+  flex-direction: column;
+  display: flex;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  padding-top: 8px;
+  padding-bottom: 16px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 1;
+}
+
+.title-menu-row {
+  vertical-align: inherit;
+  max-width: 100%;
+  min-height: 0px !important;
+  min-width: 0px !important;
+  flex-shrink: 0;
+  flex-direction: column;
+  flex-basis: auto;
+  display: flex;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  flex-flow: row nowrap;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.title-menu-column {
+  display: inline-block;
+  min-width: 155px;
+  margin-right: 15px;
+}
+
+.item-card-wrapper {
+  border: 1px solid #d9d6ff;
+  //   border: 1px solid #bfbfbf;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+  &:hover {
+    // border: 1px solid $primary;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+.item-card-wrapper-img {
+  border-radius: 10px;
+}
+
+/* Section 3 Styles  */
+
+.item-slider-card {
+  border: 1px solid #bfbfbf;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+  .pt-100 {
+    padding-top: 50px;
+  }
+  .pb-100 {
+    padding-bottom: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 900px) {
+  .pt-100 {
+    padding-top: 50px;
+  }
+  .pb-100 {
+    padding-bottom: 50px;
+  }
+  .text-xs-center {
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  .pt-100 {
+    padding-top: 100px;
+  }
+  .pb-100 {
+    padding-bottom: 100px;
+  }
+  .menu-text {
+    font-size: 12px;
+  }
+}

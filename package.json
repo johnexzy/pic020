@@ -6,7 +6,7 @@
   "author": "Johnexzy <obajohn75@gmail.com>",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext .js,.ts,.vue ./",
+    "lint": "eslint --ext .js,.ts,.vue ./ --fix",
     "test": "echo \"No test specified\" && exit 0",
     "dev": "cross-env  NODE_OPTIONS=--openssl-legacy-provider quasar dev",
     "build": "cross-env  NODE_OPTIONS=--openssl-legacy-provider quasar build",

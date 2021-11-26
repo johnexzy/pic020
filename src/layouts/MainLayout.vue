@@ -5,7 +5,7 @@
 
 
         <q-toolbar-title class=" text-center">
-          Pure and Industrial Chemistry 0'20 UNN
+          Pure and Ind. Chemistry 0'20 UNN
         </q-toolbar-title>
 
         <!-- <div>Quasar v{{ $q.version }}</div> -->

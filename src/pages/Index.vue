@@ -1,21 +1,23 @@
 <template>
   <q-page class="row items-center justify-evenly">
-    <AllPersons :data="Persons" />
+    <AllPersons :data="getPersons" />
   </q-page>
 </template>
 
 <script lang="ts">
 import { Todo, Meta } from 'components/models';
 import AllPersons from 'components/Item/AllItems.vue';
-import { defineComponent, ref, computed } from 'vue';
+import { defineComponent, ref } from 'vue';
 import { useStore } from 'src/store';
+import { createNamespacedHelpers } from 'vuex-composition-helpers';
+const { useGetters } = createNamespacedHelpers(useStore(), 'person');
 // import { Person } from 'src/store/person/state';
 
 export default defineComponent({
   name: 'PageIndex',
   components: { AllPersons },
   setup() {
-    const $store = useStore();
+    // const $store = useStore();
     const todos = ref<Todo[]>([
       {
         id: 1,
@@ -41,8 +43,8 @@ export default defineComponent({
     const meta = ref<Meta>({
       totalCount: 1200,
     });
-    const Persons = computed(() => $store.state.person.fpersons);
-    return { todos, meta, Persons };
+    const { getPersons } = useGetters(['getPersons'])
+    return { todos, meta, getPersons };
   },
 });
 </script>

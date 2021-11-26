@@ -4,7 +4,7 @@ import { PersonStateInterface, Person } from './state';
 
 const getters: GetterTree<PersonStateInterface, StateInterface> = {
   getPersons (state: PersonStateInterface) : Array<Person> {
-    return state.persons
+    return state.fpersons
   }
 };
 

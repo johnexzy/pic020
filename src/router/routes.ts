@@ -10,7 +10,7 @@ const routes: RouteRecordRaw[] = [
         component: () => import('pages/Index.vue'),
         children: [
           {
-            path: 'chemist/:id',
+            path: 'chemist/:slug',
             name: 'chemistModal',
             props: true,
             component: () => import('components/Item/DetailModal.vue'),

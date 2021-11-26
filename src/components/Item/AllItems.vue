@@ -199,18 +199,9 @@
 import { defineComponent, PropType } from 'vue';
 import { useStore } from 'src/store';
 import { createNamespacedHelpers } from 'vuex-composition-helpers';
+import { Person } from '../models';
 const { useMutations } = createNamespacedHelpers(useStore(), 'person');
-export interface Person {
-  Timestamp: string;
-  'Email Address': string;
-  'Full Name': string;
-  'State of origin': string;
-  'Phone number': string;
-  'Nick name (optional)': string;
-  'Hobbies and passion': string;
-  'Photo (passport)': string;
-  image: string;
-}
+
 import ItemGridView from 'components/Item/ItemGridView.vue';
 // import { ModuleState, ModuleGetters, ModuleActions, ModuleMutations } from '@/store/person'
 export default defineComponent({

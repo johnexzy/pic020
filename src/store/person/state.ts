@@ -18,7 +18,8 @@ export interface Person {
   'Hobbies and passion': string
   'Photo (passport)': string,
   'image': string,
-  'id': number
+  'id': number,
+  slug: string
 }
 
 function state (): PersonStateInterface {
@@ -35,7 +36,8 @@ function state (): PersonStateInterface {
       'Hobbies and passion': 'Love listen to music / dancing ',
       'Photo (passport)': 'https://drive.google.com/open?id=1JUFo3YjavQbdFCUk-6ODEXPvey3i8GSE',
       'image': 'https://drive.google.com/uc?id=1JUFo3YjavQbdFCUk-6ODEXPvey3i8GSE',
-      id: 38
+      id: 38,
+      slug: 'agukpo-Beatrice-Nneka'
     },
     fpersons: fpersons,
     persons: persons

@@ -19,7 +19,7 @@
     <!-- <q-card class="bg-white item-card-modal" style="width: 1200px;"> -->
     <!-- <q-card-section class="q-py-xl"> -->
     <div style="max-width: 1000px; box-shadow: none">
-      <modal-item-detail :id="id" />
+      <modal-item-detail />
     </div>
     <!-- </q-card-section> -->
     <!-- </q-card> -->
@@ -37,7 +37,7 @@ import ModalItemDetail from 'components/Item/ModalItemDetail.vue';
 export default defineComponent({
   name: 'DetailModal',
   props: {
-    id: String
+    slug: String
   },
   components: { ModalItemDetail },
 
@@ -46,7 +46,7 @@ export default defineComponent({
     // alert('john')
     const itemDetailModal = ref(true)
     const router = useRouter()
-    setPerson(props.id);
+    setPerson(props.slug);
     return {
       hide(){
         router.back()

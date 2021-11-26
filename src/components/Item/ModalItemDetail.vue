@@ -104,9 +104,6 @@ const { useGetters } = createNamespacedHelpers(useStore(), 'person');
 // import { ModuleState, ModuleGetters, ModuleActions, ModuleMutations } from '@/store/person'
 export default defineComponent({
   name: 'ModalItemDetail',
-  props: {
-    id: String,
-  },
 
   setup() {
     const { getPerson } = useGetters(['getPerson']);

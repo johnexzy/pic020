@@ -151,42 +151,30 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
 import { useRouter } from 'vue-router'
-export interface Person {
-  Timestamp: string;
-  'Email Address': string;
-  'Full Name': string;
-  'State of origin': string;
-  'Phone number': string;
-  'Nick name (optional)': string;
-  'Hobbies and passion': string;
-  'Photo (passport)': string;
-  image: string;
-  id: number
-}
+import { Person } from '../models';
 export default defineComponent({
   props: {
     item: {
       type: Object as PropType<Person>,
       default: () => ({
-        Timestamp: '5/10/2021 12:03:54',
-        'Email Address': '',
-        'Full Name': 'Echemazu Ezinne chinonso ',
-        'State of origin': '',
-        'Phone number': '08143874597',
-        'Nick name (optional)': '',
-        'Hobbies and passion':
-          'Reading , traveling and watching movies\nTo be able to give back to the society especially to the less privilege.',
-        'Photo (passport)':
-          'https://drive.google.com/open?id=1IcTfjc-eSfVLVkQSw_hIbSoVv7HwXFdp',
-        image:
-          'https://drive.google.com/uc?id=1IcTfjc-eSfVLVkQSw_hIbSoVv7HwXFdp',
-      }),
+      'Timestamp': '7/16/2021 22:18:39',
+      'Email Address': 'beatriceagu50@gmail.com',
+      'Full Name': 'Agukpo Beatrice Nneka ',
+      'State of origin': 'ENUGU',
+      'Phone number': '07050459080',
+      'Nick name (optional)': 'Tricy',
+      'Hobbies and passion': 'Love listen to music / dancing ',
+      'Photo (passport)': 'https://drive.google.com/open?id=1JUFo3YjavQbdFCUk-6ODEXPvey3i8GSE',
+      'image': 'https://drive.google.com/uc?id=1JUFo3YjavQbdFCUk-6ODEXPvey3i8GSE',
+      id: 38,
+      slug: 'agukpo-Beatrice-Nneka'
+    }),
     },
   },
 
   setup() {
     const router = useRouter()
-    const goto = (item: Person): void => router.push({ name:'chemistModal', params: {id: item.id}})
+    const goto = (item: Person): void => router.push({ name:'chemistModal', params: {slug: item.slug}})
     return {
       itemDetailModal: false,
       alert: false,

@@ -717,7 +717,7 @@ const seeds = [
     'State of origin': 'EBONYI',
     'Phone number': '09092541812, 07016270120, 08100390186',
     'Nick name (optional)': 'Oreos_kizo ',
-    'Hobbies and passion': 'Music, football, weed 😏',
+    'Hobbies and passion': 'Music and football',
     'Photo (passport)':
       'https://drive.google.com/open?id=1TFjiWmVgCBQMcI46lmIlvg0U3-20_kia',
     image: 'https://drive.google.com/uc?id=1TFjiWmVgCBQMcI46lmIlvg0U3-20_kia',

@@ -1,6 +1,7 @@
 export interface PersonStateInterface {
   prop: boolean;
   persons: Array<Person>;
+  fpersons: Array<Person>;
 }
 
 export interface Person {
@@ -18,18 +19,17 @@ export interface Person {
 function state (): PersonStateInterface {
   return {
     prop: false,
-    persons: [
-      {
-        'Timestamp': '5/10/2021 12:03:54',
-        'Email Address': '',
-        'Full Name': 'Echemazu Ezinne chinonso ',
-        'State of origin': '',
-        'Phone number': '08143874597',
-        'Nick name (optional)': '',
-        'Hobbies and passion': 'Reading , traveling and watching movies\nTo be able to give back to the society especially to the less privilege.',
-        'Photo (passport)': 'https://drive.google.com/open?id=1IcTfjc-eSfVLVkQSw_hIbSoVv7HwXFdp',
-        'image': 'https://drive.google.com/uc?id=1IcTfjc-eSfVLVkQSw_hIbSoVv7HwXFdp'
-      },
+    fpersons: [{
+      'Timestamp': '5/10/2021 12:03:54',
+      'Email Address': '',
+      'Full Name': 'Echemazu Ezinne chinonso ',
+      'State of origin': '',
+      'Phone number': '08143874597',
+      'Nick name (optional)': '',
+      'Hobbies and passion': 'Reading , traveling and watching movies\nTo be able to give back to the society especially to the less privilege.',
+      'Photo (passport)': 'https://drive.google.com/open?id=1IcTfjc-eSfVLVkQSw_hIbSoVv7HwXFdp',
+      'image': 'https://drive.google.com/uc?id=1IcTfjc-eSfVLVkQSw_hIbSoVv7HwXFdp'
+    },
       {
         'Timestamp': '6/23/2021 8:01:51',
         'Email Address': '',
@@ -205,7 +205,9 @@ function state (): PersonStateInterface {
         'Hobbies and passion': 'Singing, travelling and movies',
         'Photo (passport)': 'https://drive.google.com/open?id=1GpEzYC5_ui8pWKQOjWcJjJBX6RqzZFIZ',
         'image': 'https://drive.google.com/uc?id=1GpEzYC5_ui8pWKQOjWcJjJBX6RqzZFIZ'
-      },
+      },],
+    persons: [
+
       {
         'Timestamp': '6/29/2021 13:56:10',
         'Email Address': 'amakachi89@gmail.com',

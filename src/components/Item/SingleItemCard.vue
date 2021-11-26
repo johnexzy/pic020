@@ -121,20 +121,21 @@
     </div>
     <q-item class="q-px-none">
       <q-item-section>
-        <q-item-label class="text-weight-bold">
-          {{ item.Timestamp }}
-          <!-- <span class="text-grey-6">1/1</span> -->
+        <q-item-label>
+          <q-icon name="phone" left size="sm" />
+          <span class="text-grey-6 text-subtitle2">{{item['Phone number']}}</span>
         </q-item-label>
-        <q-item-label><span class="text-grey-6">9999</span></q-item-label>
+        <q-item-label :lines="2">
+          <span class="text-grey-6" >{{item['Email Address']}}</span></q-item-label>
         <q-item-label caption lines="2">🔥❤️❤️❤️❤️</q-item-label>
       </q-item-section>
 
-      <q-item-section side>
+      <!-- <q-item-section side>
         <q-item-label class="text-grey-6">
           <q-icon size="18px" name="favorite_border" color="grey-6" />
           4
         </q-item-label>
-      </q-item-section>
+      </q-item-section> -->
     </q-item>
   </div>
 </template>

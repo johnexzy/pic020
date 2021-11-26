@@ -2,8 +2,9 @@ import { MutationTree } from 'vuex';
 import { PersonStateInterface } from './state';
 
 const mutation: MutationTree<PersonStateInterface> = {
-  someMutation (/* state: ExampleStateInterface */) {
-    // your code
+  setLoadPerson (state: PersonStateInterface) {
+    // const bank = state.persons
+    state.fpersons = state.fpersons.concat(state.persons.splice(0, 10))
   }
 };
 

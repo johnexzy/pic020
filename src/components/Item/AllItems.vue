@@ -184,28 +184,22 @@
   <!-- </div> -->
 
   <div>
-    <!-- <q-infinite-scroll @load="onLoad" :offset="400"> -->
-    <item-grid-view :data="data" />
-    <!-- <template v-slot:loading>
-          <div class="row justify-center items-center q-my-md">
-            <div class="text-subtitle1 text-grey-6 row items-center">
-              <img
-                src="../../assets/loading.png"
-                style="width: 20px; height: 20px"
-                class="q-mr-sm"
-              />
-              Loading...
-            </div>
-          </div>
-        </template> -->
-    <!-- </q-infinite-scroll> -->
+    <q-infinite-scroll @load="onLoad" :offset="250">
+      <item-grid-view :data="data" />
+      <template v-slot:loading>
+        <div class="row justify-center q-my-md">
+          <q-spinner-dots color="primary" size="40px" />
+        </div>
+      </template>
+    </q-infinite-scroll>
   </div>
   <!-- </div> -->
 </template>
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
-// import { useStore } from 'src/store';
-// import { Person } from 'src/store/person/state';
+import { useStore } from 'src/store';
+import { createNamespacedHelpers } from 'vuex-composition-helpers';
+const { useMutations } = createNamespacedHelpers(useStore(), 'person');
 export interface Person {
   Timestamp: string;
   'Email Address': string;
@@ -218,6 +212,7 @@ export interface Person {
   image: string;
 }
 import ItemGridView from 'components/Item/ItemGridView.vue';
+// import { ModuleState, ModuleGetters, ModuleActions, ModuleMutations } from '@/store/person'
 export default defineComponent({
   name: 'AllPersons',
   props: {
@@ -226,5 +221,17 @@ export default defineComponent({
     },
   },
   components: { ItemGridView },
+
+  setup() {
+    const { setLoadPerson } = useMutations(['setLoadPerson']);
+    return {
+      onLoad(index: number, done: () => void) {
+        setTimeout(() => {
+          setLoadPerson();
+          done();
+        }, 2000);
+      },
+    };
+  },
 });
 </script>

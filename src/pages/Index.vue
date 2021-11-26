@@ -41,7 +41,7 @@ export default defineComponent({
     const meta = ref<Meta>({
       totalCount: 1200,
     });
-    const Persons = computed(() => $store.state.person.persons);
+    const Persons = computed(() => $store.state.person.fpersons);
     return { todos, meta, Persons };
   },
 });

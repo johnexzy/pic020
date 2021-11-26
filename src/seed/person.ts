@@ -872,6 +872,6 @@ const seeds = [
   slug: p['Full Name'].trim().toLowerCase().split(' ').join('-'),
 }));
 
-const fpersons = seeds.slice(0, 10);
+const fpersons = seeds.slice(0, 18);
 const persons = seeds.slice(10);
 export default { seeds, fpersons, persons };

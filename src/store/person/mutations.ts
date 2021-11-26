@@ -6,6 +6,10 @@ const mutation: MutationTree<PersonStateInterface> = {
     // const bank = state.persons
     state.fpersons.push(...state.persons.splice(0, 10))
   },
+  setLoadImages (state: PersonStateInterface) {
+    // const bank = state.persons
+    state.loadImages = !state.loadImages
+  },
   setPerson(state: PersonStateInterface, slug: string) {
     state.person = state.seeds.find(r => r.slug === slug) || {
       'Timestamp': '7/16/2021 22:18:39',

@@ -1,7 +1,7 @@
 import p from '../../seed/person'
 const { persons, seeds, fpersons } = p
 export interface PersonStateInterface {
-  prop: boolean;
+  loadImages: boolean;
   persons: Array<Person>;
   seeds: Array<Person>;
   fpersons: Array<Person>;
@@ -24,7 +24,7 @@ export interface Person {
 
 function state (): PersonStateInterface {
   return {
-    prop: false,
+    loadImages: false,
     seeds: seeds,
     person: {
       'Timestamp': '7/16/2021 22:18:39',

@@ -118,7 +118,7 @@
         </q-btn>
       </div>
     </div> -->
-    <q-img class="item-card-wrapper-img q-mb-md" :src="item.image" />
+    <q-img class="item-card-wrapper-img q-mb-md" v-if="$store.state.person.loadImages" :src="item.image" />
     <div class="text-subtitle1 text-default text-weight-bold q-mb-xs">
       {{ item['Full Name'] }}
     </div>
@@ -151,6 +151,7 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
 import { useRouter } from 'vue-router'
+import { useStore } from 'src/store';
 import { Person } from '../models';
 export default defineComponent({
   props: {
@@ -173,11 +174,13 @@ export default defineComponent({
   },
 
   setup() {
+    const $store = useStore()
     const router = useRouter()
-    const goto = (item: Person): void => router.push({ name:'chemistModal', params: {slug: item.slug}})
+    const goto = (item: Person) => router.push({ name:'chemistModal', params: {slug: item.slug}})
     return {
       itemDetailModal: false,
       alert: false,
+      $store,
       goto
     };
   },

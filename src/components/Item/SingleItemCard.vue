@@ -19,7 +19,10 @@
     </router-link>
     <router-view />
   </div> -->
-  <div class="item-card-wrapper cursor-pointer">
+  <div
+    @click="goto(item)"
+    class="item-card-wrapper cursor-pointer"
+  >
     <!-- <div class="row justify-between q-mb-md">
       <div class="col-auto">
         <q-avatar
@@ -123,10 +126,15 @@
       <q-item-section>
         <q-item-label>
           <q-icon name="phone" left size="sm" />
-          <span class="text-grey-6 text-subtitle2">{{item['Phone number']}}</span>
+          <span class="text-grey-6 text-subtitle2">{{
+            item['Phone number']
+          }}</span>
         </q-item-label>
         <q-item-label :lines="2">
-          <span class="text-grey-6" >{{item['Email Address']}}</span></q-item-label>
+          <span class="text-grey-6">{{
+            item['Email Address']
+          }}</span></q-item-label
+        >
         <q-item-label caption lines="2">🔥❤️❤️❤️❤️</q-item-label>
       </q-item-section>
 
@@ -142,6 +150,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
+import { useRouter } from 'vue-router'
 export interface Person {
   Timestamp: string;
   'Email Address': string;
@@ -152,6 +161,7 @@ export interface Person {
   'Hobbies and passion': string;
   'Photo (passport)': string;
   image: string;
+  id: number
 }
 export default defineComponent({
   props: {
@@ -173,10 +183,14 @@ export default defineComponent({
       }),
     },
   },
-  data() {
+
+  setup() {
+    const router = useRouter()
+    const goto = (item: Person): void => router.push({ name:'chemistModal', params: {id: item.id}})
     return {
       itemDetailModal: false,
       alert: false,
+      goto
     };
   },
   // computed: {
